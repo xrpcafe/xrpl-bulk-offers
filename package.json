@@ -1,0 +1,15 @@
+{
+  "name": "xrpl-bulk-sell-offer",
+  "version": "1.0.0",
+  "description": "script bulk sell offers of NFTs on the xrpl",
+  "main": "bulk-sell.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "xrp.cafe",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.8",
+    "xrpl": "^2.7.0-beta.0"
+  }
+}
