@@ -25,7 +25,7 @@ git clone https://github.com/xrpcafe/xrpl-bulk-offers
     "Secret_Key" : "",
     "Sell":
     {
-        "Issuer": ""
+        "Issuer": "",
         "Taxon": 0,
         "XRP_Price": 10,
         "Expiration": "2023-01-22 00:00:00"
