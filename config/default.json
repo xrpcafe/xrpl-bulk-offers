@@ -1,9 +1,10 @@
 {
     "XRPL_Server": "wss://s.altnet.rippletest.net:51233/",
     "Account" : "rL8RMQZhA1Wycu8AP4cNLEQRCthuwARsPs",
-    "Secret_Key" : "",
+    "Secret_Key" : "sEdVHLkEJcKBqU4KExNVT4zw3zgn9WG",
     "Sell":
     {
+        "Issuer": "",
         "Taxon": 0,
         "XRP_Price": 10,
         "Expiration": "2023-01-22 00:00:00"

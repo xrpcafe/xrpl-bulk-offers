@@ -3,6 +3,7 @@ const config = require('config');
 const xrplServer = config.get('XRPL_Server');
 const xrp_account = config.get('Account');
 const xrp_account_secret = config.get('Secret_Key');
+const issuer = config.get('Sell.Issuer');
 const taxon = config.get('Sell.Taxon');
 const xrp_price = config.get('Sell.XRP_Price') * 1000000;
 const expiration = config.get('Sell.Expiration') !== "" ? xrpl.unixTimeToRippleTime(new Date(config.get('Sell.Expiration'))) : 0;
@@ -71,9 +72,9 @@ async function main() {
       } while (marker != undefined);
     } catch(err) { console.log('Error getting account nfts: ' + err);}
 
-    const filtered_account_nfts = account_nfts.filter(obj => {return obj.Issuer == xrp_account && obj.NFTokenTaxon == taxon;});
+    const filtered_account_nfts = account_nfts.filter(obj => {return obj.Issuer == issuer && obj.NFTokenTaxon == taxon;});
 
-    console.log(filtered_account_nfts.length.toString() + ' NFTs found on account for issuer: ' + xrp_account + ' and Taxon: ' + taxon);
+    console.log(filtered_account_nfts.length.toString() + ' NFTs found on account for issuer: ' + issuer + ' and Taxon: ' + taxon);
     console.log('Scripting sell offers');
     try{
         const hot_wallet = xrpl.Wallet.fromSeed(xrp_account_secret);
