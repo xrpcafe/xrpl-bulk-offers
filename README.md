@@ -25,6 +25,7 @@ git clone https://github.com/xrpcafe/xrpl-bulk-offers
     "Secret_Key" : "",
     "Sell":
     {
+        "Issuer": ""
         "Taxon": 0,
         "XRP_Price": 10,
         "Expiration": "2023-01-22 00:00:00"
@@ -38,9 +39,10 @@ git clone https://github.com/xrpcafe/xrpl-bulk-offers
  ```diff
 - KEEP THIS SAFE, DO NOT SHARE!!!
 ```
-4. Taxon: the token taxon to create the sell offers against
-5. XRP_Price: Price in XRP to set the sell offers for
-6. Expiration: Expiration for the sell offers in UTC time format YYYY-MM-DD HH:MM:SS (leave as an empty string for no expiration)
+4. Issuer: the issuer of the NFT to create the sell offers against
+5. Taxon: the token taxon to create the sell offers against
+6. XRP_Price: Price in XRP to set the sell offers for
+7. Expiration: Expiration for the sell offers in UTC time format YYYY-MM-DD HH:MM:SS (leave as an empty string for no expiration)
 
 ### Install
 ``` npm install ``` 
